@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/font-styles.css" />
+    <link rel="stylesheet" href="button.css">
+    <script src="assets/references.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body class="noselect">
+    <div class="container">
+      <div class="content">
+        <div class="process">
+          <!-- Status Text-->
+
+          <span id="intro">The Installer will now Install FireClient V.1.0.0</span>
+          <span id="load">Loading Client Files...</span>
+          <span id="done">FireClient has now been fully installed.</span>
+          <span id="close"
+            ><btn onclick="feedback.close()" class="btn"
+              >Close Installer</btn
+            ></span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="loader">
+      <!--Loader Code-->
+      <object type="image/svg+xml" data="assets/spinner.svg"></object>
+    </div>
+  </body>
+</html>
