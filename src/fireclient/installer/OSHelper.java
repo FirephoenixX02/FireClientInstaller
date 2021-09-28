@@ -17,7 +17,7 @@ public enum OSHelper {
 		return System.getProperty("user.home") + mc;
 	}
 
-	public static final OSHelper getOS() {
+	public static OSHelper getOS() {
 		final String currentOS = System.getProperty("os.name").toLowerCase();
 
 		if (currentOS.startsWith("windows")) {

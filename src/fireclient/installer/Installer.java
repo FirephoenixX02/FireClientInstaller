@@ -1,10 +1,7 @@
 package fireclient.installer;
 
-import javax.swing.JOptionPane;
-
 import jaco.mp3.player.MP3Player;
 import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -16,6 +13,10 @@ import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import netscape.javascript.JSObject;
+
+import javax.swing.*;
+
+import static javafx.application.Platform.runLater;
 
 public class Installer extends Application {
 
@@ -47,21 +48,18 @@ public class Installer extends Application {
 		stage.setHeight(620);
 		webView.setContextMenuEnabled(false);
 
-		Platform.runLater(new Runnable() {
-			@Override
-			public void run() {
-				webView.getEngine().load(ClassLoader.getSystemResource("index.html").toExternalForm());
-				webView.getEngine().getLoadWorker().stateProperty().addListener((observable, oldValue, newValue) -> {
+		Platform.runLater(() -> {
+			webView.getEngine().load(ClassLoader.getSystemResource("index.html").toExternalForm());
+			webView.getEngine().getLoadWorker().stateProperty().addListener((observable, oldValue, newValue) -> {
 
-					if (newValue == Worker.State.SUCCEEDED) {
-						((JSObject) webView.getEngine().executeScript("window")).setMember("feedback", feedbackHandler);
-						if (webView.getEngine().getLocation().toLowerCase().contains("index.html")) {
-							registerWorkers();
-						}
+				if (newValue == Worker.State.SUCCEEDED) {
+					((JSObject) webView.getEngine().executeScript("window")).setMember("feedback", feedbackHandler);
+					if (webView.getEngine().getLocation().toLowerCase().contains("index.html")) {
+						registerWorkers();
 					}
+				}
 
-				});
-			}
+			});
 		});
 		stage.show();
 	}
@@ -87,7 +85,7 @@ public class Installer extends Application {
 		if (currentIndex > 100) {
 
 			new Timeline(new KeyFrame(Duration.seconds(4.0),
-					e -> Platform.runLater(() -> webView.getEngine().executeScript("javascript:finished()"))
+					e -> runLater(() -> webView.getEngine().executeScript("javascript:finished()"))
 			)).play();
 		}
 	}
