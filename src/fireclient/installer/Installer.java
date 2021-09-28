@@ -48,18 +48,21 @@ public class Installer extends Application {
 		stage.setHeight(620);
 		webView.setContextMenuEnabled(false);
 
-		Platform.runLater(() -> {
-			webView.getEngine().load(ClassLoader.getSystemResource("index.html").toExternalForm());
-			webView.getEngine().getLoadWorker().stateProperty().addListener((observable, oldValue, newValue) -> {
+		Platform.runLater(new Runnable() {
+			@Override
+			public void run() {
+				webView.getEngine().load(ClassLoader.getSystemResource("index.html").toExternalForm());
+				webView.getEngine().getLoadWorker().stateProperty().addListener((observable, oldValue, newValue) -> {
 
-				if (newValue == Worker.State.SUCCEEDED) {
-					((JSObject) webView.getEngine().executeScript("window")).setMember("feedback", feedbackHandler);
-					if (webView.getEngine().getLocation().toLowerCase().contains("index.html")) {
-						registerWorkers();
+					if (newValue == Worker.State.SUCCEEDED) {
+						((JSObject) webView.getEngine().executeScript("window")).setMember("feedback", feedbackHandler);
+						if (webView.getEngine().getLocation().toLowerCase().contains("index.html")) {
+							registerWorkers();
+						}
 					}
-				}
 
-			});
+				});
+			}
 		});
 		stage.show();
 	}
