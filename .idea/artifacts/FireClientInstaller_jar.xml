@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FireClientInstaller:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FireClientInstaller_jar</output-path>
+    <root id="archive" name="FireClientInstaller.jar">
+      <element id="module-output" name="FireClientInstaller" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gson-2.8.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jfxrt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/webswing-app-toolkit-2.5.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jaco-mp3-player-0.9.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/javafx.graphics.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

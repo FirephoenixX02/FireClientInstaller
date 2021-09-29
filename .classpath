@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/Client/jars/libraries/com/google/guava/guava/17.0/guava-17.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-8-openjdk-amd64"/>
-	<classpathentry kind="lib" path="/home/otis/Dokumente/FireClient/Installer/libs/jaco-mp3-player-0.9.4.jar"/>
-	<classpathentry kind="lib" path="/home/otis/Dokumente/FireClient/Installer/libs/gson-2.8.6.jar"/>
-	<classpathentry kind="lib" path="/home/otis/Dokumente/FireClient/Installer/libs/javafx.base.jar"/>
-	<classpathentry kind="lib" path="/home/otis/Dokumente/FireClient/Installer/libs/javafx.controls.jar"/>
-	<classpathentry kind="lib" path="/home/otis/Dokumente/FireClient/Installer/libs/javafx.fxml.jar"/>
-	<classpathentry kind="lib" path="/home/otis/Dokumente/FireClient/Installer/libs/javafx.graphics.jar"/>
-	<classpathentry kind="lib" path="/home/otis/Dokumente/FireClient/Installer/libs/javafx.media.jar"/>
-	<classpathentry kind="lib" path="/home/otis/Dokumente/FireClient/Installer/libs/javafx.swing.jar"/>
-	<classpathentry kind="lib" path="/home/otis/Dokumente/FireClient/Installer/libs/javafx.web.jar"/>
-	<classpathentry kind="lib" path="/home/otis/Dokumente/FireClient/Installer/libs/javafx-swt.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/jaco-mp3-player-0.9.4"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx-swt"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx.base"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx.controls"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx.fxml"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx.media"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx.swing"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx.web"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/webswing-app-toolkit-2.5.4"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/javafx.graphics"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/jfxrt"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/gson-2.8.6"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
