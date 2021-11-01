@@ -1,3 +1,3 @@
 # FireClientInstaller
 
-The Installer for the Minecraft PvP Client FireClient.
+The Installer for my Minecraft PvP Client FireClient.
